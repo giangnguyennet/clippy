@@ -1,14 +1,14 @@
 Clippy - Helping you copy text to your clipboard (get the text form html element id)
 ================================================
 
-Source Code: http://github.com/jinzhu/clippy
-Modfied By:  ZhangJinzhu - wosmvp@gmail.com
-Based On:    http://github.com/mojombo/clippy
+Source Code: git@github.com:ndgiang84/clippy.git
+Modfied By:  Giang - ndgiang84@gmail.com
+Based On:    https://github.com/jinzhu/clippy
 
 Here is a sample Rails (Ruby) helper that can be used to place Clippy on a page:
 C
 
-    def clippy(htmlElementId, copied='已复制(#default is `copied!`)',copyto='复制到剪贴板(#default is `copy to clipboard`)',callBack='clippyCallBackFuncation(#default is nothing)',bgcolor='#FFFFFF')
+    def clippy(htmlElementId, copied='copied!',copyto='copy to clipboard',callBack='clippyCallBackFuncation(#default is nothing)',bgcolor='#FFFFFF')
       html = <<-EOF
         <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
                 width="110"
@@ -18,7 +18,7 @@ C
         <param name="allowScriptAccess" value="always" />
         <param name="quality" value="high" />
         <param name="scale" value="noscale" />
-        <param NAME="FlashVars" value="id=#{idhtmlElementId}&amp;copied=#{copied}&amp;copyto=#{copyto}&amp;callBack=#{callBack}">
+        <param NAME="FlashVars" value="id=#{htmlElementId}&amp;copied=#{copied}&amp;copyto=#{copyto}&amp;callBack=#{callBack}">
         <param name="bgcolor" value="#{bgcolor}">
         <embed src="/flash/clippy.swf"
                width="110"
@@ -28,7 +28,7 @@ C
                allowScriptAccess="always"
                type="application/x-shockwave-flash"
                pluginspage="http://www.macromedia.com/go/getflashplayer"
-               FlashVars="id=#{idhtmlElementId}&amp;copied=#{copied}&amp;copyto=#{copyto}&amp;callBack=#{callBack}"
+               FlashVars="id=#{htmlElementId}&amp;copied=#{copied}&amp;copyto=#{copyto}&amp;callBack=#{callBack}"
                bgcolor="#{bgcolor}"
         />
         </object>
