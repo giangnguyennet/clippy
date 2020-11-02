@@ -1,8 +1,8 @@
 Clippy - Helping you copy text to your clipboard (get the text form html element id)
 ================================================
 
-Source Code: git@github.com:ndgiang84/clippy.git
-Modfied By:  Giang - ndgiang84@gmail.com
+Source Code: git@github.com:giangnguyennet/clippy.git
+Modfied By:  Giang Nguyen
 Based On:    https://github.com/jinzhu/clippy
 
 Here is a sample Rails (Ruby) helper that can be used to place Clippy on a page:
